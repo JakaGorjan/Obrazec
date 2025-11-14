@@ -1,0 +1,182 @@
+/* GLOBALNO */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Excon, Roboto;
+    background-color: #191938;
+    color: rgb(151, 137, 205);
+}
+
+/* GLAVNI LAYOUT */
+
+.stran {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* LEVA STRAN */
+
+.levo {
+    flex: 1;
+    padding: 32px 64px;
+    display: flex;
+    flex-direction: column;
+	justify-content: space-between;   /* ← POTISNE FOOTER DOL */
+    height: 100vh; 
+}
+
+.glava-logotip {
+    display: flex;
+    align-items: center;
+}
+
+
+.logotip-slika {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+
+.ovoj-obrazca {
+    max-width: 420px;
+	margin: 40px auto 0 auto;
+}
+
+.majhen-tekst {
+    color: #b8b7d4;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #f6c63b;
+}
+
+.obrazec {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+/* POLJA */
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.9rem;
+}
+
+
+ input{
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #343055;
+    background: #151233;
+    color: #fff;
+}
+
+.namig {
+    font-size: 0.75rem;
+    color: #8b89aa;
+}
+
+.polje-oznacbe {
+  /*  display: flex; */
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.8rem;
+}
+
+/* GUMBI */
+
+.gumb-primarni {
+    padding: 12px;
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(90deg, #f6c63b, #eea51a);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.locilo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.locilo span {
+    flex: 1;
+    height: 1px;
+    background: #2d2949;
+}
+
+.socialni-gumbi {
+    display: flex;
+    gap: 10px;
+	overflow: hidden;
+	
+}
+
+.gumb-socialni {
+    flex: 1;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 1px solid #343055;
+    background: #151233;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    color: #fff;
+}
+
+.gumb-socialni img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+/* NOGA */
+
+.noga-tekst {
+    font-size: 12px;
+    color: #6e6a95;
+    max-width: 420px;
+	text-align: center;       /* <-- to ga poravna na sredino */
+    margin: 0 auto;
+
+}
+
+/* DESNA STRAN (Samo slika) */
+
+.desno {
+    flex: 1;
+    position: relative;
+}
+
+.ozadna-slika {
+    position: absolute;
+    inset: 0;
+    background-image: url("slike/desna.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* MOBILNO */
+
+@media (max-width: 900px) {
+    .desno {
+        display: none;
+    }
+
+    .levo {
+        padding: 20px;
+    }
+}
