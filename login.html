@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="slike/title.png">
+
+    <link rel="stylesheet" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body class="login-page">
+<div class="stran">
+
+    <!-- LEVI DEL -->
+    <div class="levo">
+
+        <div class="glava-logotip">
+			<img src="slike/levi.png" alt="Logotip" class="logotip-slika">
+		</div>
+
+        <div class="ovoj-obrazca">
+            <h1>Prijava</h1>
+
+            <p class="majhen-tekst">
+                Nimaš računa?
+                <a href="register.html">Registracija</a>
+            </p>
+
+            <form class="obrazec" novalidate>
+
+                <label>
+                    E-pošta ali uporabniško ime
+                    <input type="text" placeholder="email@gmail.com">
+                </label>
+
+                <label>
+                    Geslo
+                    <input type="password" id="geslo" placeholder="Geslo">
+                </label>
+
+                <a href="#" style="font-size: 15px; text-align: left; margin-top: -10px;">
+                    Pozabljeno geslo?
+                </a>
+
+                <button type="submit" class="gumb-primarni">Igraj zdaj</button>
+
+                <div class="locilo">
+                    <span></span>
+                    <p>Ali nadaljuj z</p>
+                    <span></span>
+                </div>
+
+                <div class="socialni-gumbi">
+                    <button  type="button" class="gumb-socialni">
+					    <img src="slike/google.svg" alt="">Google
+					</button>
+
+                    <button  type="button" class="gumb-socialni">
+					    <img src="slike/steam.svg" alt="">Steam
+					</button>
+
+                    <button  type="button" class="gumb-socialni">
+					    <img src="slike/metamask.png" alt="">Metamask
+					</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- DESNA STRAN -->
+    <div class="desno">
+        <div class="ozadna-slika"></div>
+    </div>
+
+</div>
+
+<script>
+// JS LOGIN OBRAZCA
+const obrazec = document.querySelector('.obrazec');
+
+obrazec.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const uporabnik = obrazec.querySelector('input[type="text"]');
+    const geslo = obrazec.querySelector('#geslo');
+
+    if (uporabnik.value.trim() === "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Napaka',
+            text: 'Vnesi e-pošto ali uporabniško ime.'
+        });
+        return;
+    }
+
+    if (geslo.value.trim() === "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Napaka',
+            text: 'Vnesi geslo.'
+        });
+        return;
+    }
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Prijava uspešna!',
+        confirmButtonColor: '#f6c63b'
+    });
+
+    obrazec.reset();
+});
+</script>
+
+</body>
+</html>
