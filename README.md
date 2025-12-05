@@ -1,5 +1,5 @@
-README.md
-🔐 Login & Registration Form (Slovenian Localization)
+
+<h1 align="center">🔐 Login & Registration Form (Slovenian Localization)</h1>
 
 This project is a fully designed Login and Registration form, created as a localized Slovenian version of an existing original interface.
 The goal of this project was to recreate the look, feel, and user flow of the original page while providing a clean, modern UI, written entirely in Slovenian language (sl-SI).
